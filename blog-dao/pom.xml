@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>blog-master</artifactId>
+        <groupId>com.airfans.blog</groupId>
+        <version>1.0.0</version>
+        <relativePath>../blog-master/pom.xml</relativePath>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>blog-dao</artifactId>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.airfans.blog</groupId>
+            <artifactId>blog-core</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.airfans.blog</groupId>
+            <artifactId>blog-module</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
+
+</project>

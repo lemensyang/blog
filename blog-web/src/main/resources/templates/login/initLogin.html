@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <meta charset="utf-8">
+  <title>AirFans Blog</title>
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <link href="${resRoot}/blog/css/login/style_login.css" rel='stylesheet' type='text/css' />
+  
+</head>
+<body>
+<script>
+</script>
+<!--SIGN UP-->
+<h1>Little Blog</h1>
+<div class="login-form">
+  <div class="avtar">
+    <img src="" />
+  </div>
+  <form action="" method="post">
+    <input type="text" name="userName" id="userName" class="text" value="" />
+
+    <input type="password" name = "userPwd" id="userPwd" value=""/>
+  </form>
+  <div class="signin">
+    <input type="submit" value="登陆" onclick="login();">
+  </div>
+</div>
+<script type="text/javascript" src="${resRoot}/plugins/jquery/jquery-3.3.1.js"></script>
+<script type="text/javascript">
+	function login(){
+		$.ajax({
+			url:"${base}/login/login.htm",
+			method:"POST",
+			data:{userName:$("#userName").val(),userPwd:$("#userPwd").val()},
+			dataType:"json",
+			success:function(data){
+				if(data.flag == 1){
+					window.location.href="${base}/"+data.home;
+				}
+			}
+		});
+	}
+	
+</script>
+</body>
+</html>

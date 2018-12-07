@@ -1,0 +1,32 @@
+spring:
+    #MVC配置
+  mvc:
+    view:
+      prefix : /templates/
+      suffix : .jsp
+      date-format : yyyy-MM-dd HH:mm:ss
+  freemarker:
+    request-context-attribute: request
+    suffix: .html
+    content-type: text/html
+    enabled: true
+    cache: false
+    template-loader-path: classpath:/templates/
+    charset: UTF-8 
+    check-template-location: true
+    expose-request-attributes: true
+    expose-session-attributes: true
+    expose-spring-macro-helpers: true
+    settings:
+      number_format: '0.##'   #数字格式化，无小数点
+      default_encoding : UTF-8
+      output_encoding : UTF-8
+      url_escaping_charset : UTF-8
+      tag_syntax : auto_detect
+      locale : zh_CN
+      datetime_format : yyyy-MM-dd HH:mm:ss
+      date_format : yyyy-MM-dd
+      time_format : HH:mm:ss
+    variables:
+      base: $[base]
+      resRoot: $[base]/RES

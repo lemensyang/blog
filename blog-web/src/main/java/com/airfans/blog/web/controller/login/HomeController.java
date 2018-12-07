@@ -1,0 +1,33 @@
+package com.airfans.blog.web.controller.login;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+@RequestMapping("/home")
+public class HomeController {
+
+    public Logger LOGGER = LoggerFactory.getLogger(this.getClass());
+
+    @RequestMapping("/main")
+    public String main(HttpServletRequest request, HttpServletResponse response) {
+        LOGGER.info("=================initLogin start log=======================");
+        // 返回页面
+        String result = "blog/userCenter/article/main_article";
+        // String employeeId = request.getRemoteUser();
+        try {
+
+
+        } catch (Exception e) {
+            LOGGER.error("首页获取权限失败", e);
+        }
+        LOGGER.info("=================initLogin end log=======================");
+        return result;
+    }
+
+}
